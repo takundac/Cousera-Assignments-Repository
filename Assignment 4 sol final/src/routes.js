@@ -15,13 +15,13 @@
   // Home page
   .state('home', {
     url: '/',
-    templateUrl: 'src/MenuApp/templates/home.template.html',
+    templateUrl: 'src/menuApp/templates/home.template.html',
     //controller: 'HomeController as home'
   })
 
   .state('categoryList', {
     url: '/category-list',
-    templateUrl: 'src/MenuApp/templates/menuCategories.template.html',
+    templateUrl: 'src/menuApp/templates/menuCategories.template.html',
     controller: 'MenuCategoriesController as menuCategories',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
@@ -32,7 +32,7 @@
 
   .state('itemsList', {
     url: '/items-list/{categoryShortName}',
-    templateUrl: 'src/MenuApp/templates/items.template.html',
+    templateUrl: 'src/menuApp/templates/items.template.html',
     controller: 'ItemsController as categoryItem',
     resolve: {
       items: ['$stateParams','MenuDataService',
